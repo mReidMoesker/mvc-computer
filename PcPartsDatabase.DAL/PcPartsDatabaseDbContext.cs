@@ -28,5 +28,27 @@ namespace PcPartsDatabase.DAL
             modelBuilder.Entity<OperatingSys>().HasKey(os => os.OsID);
             modelBuilder.Entity<Processor>().HasKey(p => p.ProcessorID);
             modelBuilder.Entity<Storage>().HasKey(s => s.StorageID);
+
+            // foreign keys
+            modelBuilder.Entity<Computer>()
+                .HasOne(c => c.Processor)
+                .WithMany()
+                .HasForeignKey("ProcessorID");
+
+            modelBuilder.Entity<Computer>()
+                .HasOne(c => c.GraphicsCard)
+                .WithMany()
+                .HasForeignKey("GraphicsID");
+
+            modelBuilder.Entity<Computer>()
+                .HasOne(c => c.OperatingSystems)
+                .WithMany()
+                .HasForeignKey("OsID");
+
+            modelBuilder.Entity<Computer>()
+                .HasMany(c => c.Storage)
+                .WithOne()
+                .HasForeignKey("StorageID");
         }
+    }
 }
