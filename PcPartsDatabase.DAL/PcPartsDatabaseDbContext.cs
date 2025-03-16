@@ -17,5 +17,16 @@ namespace PcPartsDatabase.DAL
         public DbSet<OperatingSys> OperatingSystem { get; set; }
         public DbSet<Storage> Storage { get; set; }
         public DbSet<Sys> System { get; set; }
-    }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // primary keys (computer extends system)
+            modelBuilder.Entity<Sys>().HasKey(s => s.SystemID);
+            modelBuilder.Entity<Computer>().HasKey(c => c.SystemID);
+
+            modelBuilder.Entity<GraphicsCard>().HasKey(g => g.GraphicsID);
+            modelBuilder.Entity<OperatingSys>().HasKey(os => os.OsID);
+            modelBuilder.Entity<Processor>().HasKey(p => p.ProcessorID);
+            modelBuilder.Entity<Storage>().HasKey(s => s.StorageID);
+        }
 }
