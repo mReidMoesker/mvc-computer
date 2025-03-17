@@ -39,5 +39,54 @@ namespace PcPartsDatabase.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            Computer computer = _context.Computers.Find(id);
+            
+            if (computer == null)
+            {
+                return NotFound();
+            }
+
+            return View(computer);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(int id, Computer computer)
+        {
+            if (id != computer.SystemID)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(computer);
+                    _context.SaveChanges();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!_context.Computers.Any(e => e.SystemID == computer.SystemID))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction("Index");
+            }
+            return View(computer);
+        }
     }
 }
