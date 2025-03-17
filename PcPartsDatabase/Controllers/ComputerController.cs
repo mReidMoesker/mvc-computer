@@ -73,7 +73,7 @@ namespace PcPartsDatabase.Controllers
                     _context.Update(computer);
                     _context.SaveChanges();
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (Exception ex)
                 {
                     if (!_context.Computers.Any(e => e.SystemID == computer.SystemID))
                     {
@@ -81,7 +81,7 @@ namespace PcPartsDatabase.Controllers
                     }
                     else
                     {
-                        throw;
+                        Console.WriteLine(ex.Message);
                     }
                 }
                 return RedirectToAction("Index");
