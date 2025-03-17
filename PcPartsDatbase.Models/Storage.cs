@@ -13,7 +13,7 @@ namespace PcPartsDatbase.Models
         public string? StorageBrand { get; set; }
         public bool IsSolidState { get; set; }
 
-        public string SystemID { get; set; }
+        public int SystemID { get; set; }
 
     }
 }

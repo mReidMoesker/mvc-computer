@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace PcPartsDatbase.Models
 {
-    public class System
+    public class Sys
     {
-        public string SystemID { get; set; }
+        public int SystemID { get; set; }
         public string SystemType { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PcPartsDatbase.Models
 {
-    public class OperatingSystem
+    public class OperatingSys
     {
         public int OsID { get; set; }
         public string OsName { get; set; }

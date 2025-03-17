@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PcPartsDatabase.DAL\PcPartsDatabase.DAL.csproj" />
+    <ProjectReference Include="..\PcPartsDatbase.Models\PcPartsDatbase.Models.csproj" />
+  </ItemGroup>
+
 </Project>

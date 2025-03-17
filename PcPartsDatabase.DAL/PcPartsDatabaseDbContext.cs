@@ -22,7 +22,7 @@ namespace PcPartsDatabase.DAL
         {
             // primary keys (computer extends system)
             modelBuilder.Entity<Sys>().HasKey(s => s.SystemID);
-            modelBuilder.Entity<Computer>().HasKey(c => c.SystemID);
+            modelBuilder.Entity<Computer>().HasBaseType<Sys>();
 
             modelBuilder.Entity<GraphicsCard>().HasKey(g => g.GraphicsID);
             modelBuilder.Entity<OperatingSys>().HasKey(os => os.OsID);
@@ -48,7 +48,7 @@ namespace PcPartsDatabase.DAL
             modelBuilder.Entity<Computer>()
                 .HasMany(c => c.Storage)
                 .WithOne()
-                .HasForeignKey("StorageID");
+                .HasForeignKey("SystemID");
         }
     }
 }
