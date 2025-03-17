@@ -16,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PcPartsDatbase.Models\PcPartsDatbase.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
     </None>
