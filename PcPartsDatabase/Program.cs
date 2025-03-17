@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using PcPartsDatabase.DAL;
+
 namespace PcPartsDatabase
 {
     public class Program
@@ -5,6 +8,9 @@ namespace PcPartsDatabase
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddDbContext<PcPartsDatabaseDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();

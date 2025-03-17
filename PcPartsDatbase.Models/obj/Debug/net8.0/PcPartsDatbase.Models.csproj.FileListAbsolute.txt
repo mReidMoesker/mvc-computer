@@ -1,0 +1,12 @@
+C:\mitt (wtr)\sd-advanced-database\exercises\PcPartsDatabase\PcPartsDatbase.Models\bin\Debug\net8.0\PcPartsDatbase.Models.deps.json
+C:\mitt (wtr)\sd-advanced-database\exercises\PcPartsDatabase\PcPartsDatbase.Models\bin\Debug\net8.0\PcPartsDatbase.Models.dll
+C:\mitt (wtr)\sd-advanced-database\exercises\PcPartsDatabase\PcPartsDatbase.Models\bin\Debug\net8.0\PcPartsDatbase.Models.pdb
+C:\mitt (wtr)\sd-advanced-database\exercises\PcPartsDatabase\PcPartsDatbase.Models\obj\Debug\net8.0\PcPartsDatbase.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\mitt (wtr)\sd-advanced-database\exercises\PcPartsDatabase\PcPartsDatbase.Models\obj\Debug\net8.0\PcPartsDatbase.Models.AssemblyInfoInputs.cache
+C:\mitt (wtr)\sd-advanced-database\exercises\PcPartsDatabase\PcPartsDatbase.Models\obj\Debug\net8.0\PcPartsDatbase.Models.AssemblyInfo.cs
+C:\mitt (wtr)\sd-advanced-database\exercises\PcPartsDatabase\PcPartsDatbase.Models\obj\Debug\net8.0\PcPartsDatbase.Models.csproj.CoreCompileInputs.cache
+C:\mitt (wtr)\sd-advanced-database\exercises\PcPartsDatabase\PcPartsDatbase.Models\obj\Debug\net8.0\PcPartsDatbase.Models.sourcelink.json
+C:\mitt (wtr)\sd-advanced-database\exercises\PcPartsDatabase\PcPartsDatbase.Models\obj\Debug\net8.0\PcPartsDatbase.Models.dll
+C:\mitt (wtr)\sd-advanced-database\exercises\PcPartsDatabase\PcPartsDatbase.Models\obj\Debug\net8.0\refint\PcPartsDatbase.Models.dll
+C:\mitt (wtr)\sd-advanced-database\exercises\PcPartsDatabase\PcPartsDatbase.Models\obj\Debug\net8.0\PcPartsDatbase.Models.pdb
+C:\mitt (wtr)\sd-advanced-database\exercises\PcPartsDatabase\PcPartsDatbase.Models\obj\Debug\net8.0\ref\PcPartsDatbase.Models.dll

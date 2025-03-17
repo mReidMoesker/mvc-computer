@@ -1494,6 +1494,45 @@
             "rid": "win"
           }
         }
+      },
+      "PcPartsDatabase.BLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "PcPartsDatabase.DAL": "1.0.0",
+          "PcPartsDatbase.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PcPartsDatabase.BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PcPartsDatabase.BLL.dll": {}
+        }
+      },
+      "PcPartsDatabase.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.13",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.13",
+          "PcPartsDatbase.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PcPartsDatabase.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PcPartsDatabase.DAL.dll": {}
+        }
+      },
+      "PcPartsDatbase.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/PcPartsDatbase.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PcPartsDatbase.Models.dll": {}
+        }
       }
     }
   },
@@ -3996,13 +4035,31 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "PcPartsDatabase.BLL/1.0.0": {
+      "type": "project",
+      "path": "../PcPartsDatabase.BLL/PcPartsDatabase.BLL.csproj",
+      "msbuildProject": "../PcPartsDatabase.BLL/PcPartsDatabase.BLL.csproj"
+    },
+    "PcPartsDatabase.DAL/1.0.0": {
+      "type": "project",
+      "path": "../PcPartsDatabase.DAL/PcPartsDatabase.DAL.csproj",
+      "msbuildProject": "../PcPartsDatabase.DAL/PcPartsDatabase.DAL.csproj"
+    },
+    "PcPartsDatbase.Models/1.0.0": {
+      "type": "project",
+      "path": "../PcPartsDatbase.Models/PcPartsDatbase.Models.csproj",
+      "msbuildProject": "../PcPartsDatbase.Models/PcPartsDatbase.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.EntityFrameworkCore >= 8.0.13",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.13",
-      "Microsoft.EntityFrameworkCore.Tools >= 8.0.13"
+      "Microsoft.EntityFrameworkCore.Tools >= 8.0.13",
+      "PcPartsDatabase.BLL >= 1.0.0",
+      "PcPartsDatabase.DAL >= 1.0.0",
+      "PcPartsDatbase.Models >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4037,7 +4094,17 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\mitt (wtr)\\sd-advanced-database\\exercises\\PcPartsDatabase\\PcPartsDatabase.BLL\\PcPartsDatabase.BLL.csproj": {
+              "projectPath": "C:\\mitt (wtr)\\sd-advanced-database\\exercises\\PcPartsDatabase\\PcPartsDatabase.BLL\\PcPartsDatabase.BLL.csproj"
+            },
+            "C:\\mitt (wtr)\\sd-advanced-database\\exercises\\PcPartsDatabase\\PcPartsDatabase.DAL\\PcPartsDatabase.DAL.csproj": {
+              "projectPath": "C:\\mitt (wtr)\\sd-advanced-database\\exercises\\PcPartsDatabase\\PcPartsDatabase.DAL\\PcPartsDatabase.DAL.csproj"
+            },
+            "C:\\mitt (wtr)\\sd-advanced-database\\exercises\\PcPartsDatabase\\PcPartsDatbase.Models\\PcPartsDatbase.Models.csproj": {
+              "projectPath": "C:\\mitt (wtr)\\sd-advanced-database\\exercises\\PcPartsDatabase\\PcPartsDatbase.Models\\PcPartsDatbase.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
