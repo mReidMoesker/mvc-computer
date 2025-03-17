@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PcPartsDatabase")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27ecbe1243d4452ba0cce5760236fe7ac98becda")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40195099c6612e25fa86f2342e2ebfb6f0764fdd")]
 [assembly: System.Reflection.AssemblyProductAttribute("PcPartsDatabase")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PcPartsDatabase")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
