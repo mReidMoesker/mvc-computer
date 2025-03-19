@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PcPartsDatbase.Models\PcPartsDatbase.Models.csproj" />
+    <ProjectReference Include="..\PcPartsDatbase.Models\PcPartsDatabase.Models.csproj" />
   </ItemGroup>
 
   <ItemGroup>

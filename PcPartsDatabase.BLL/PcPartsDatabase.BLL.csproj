@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PcPartsDatabase.DAL\PcPartsDatabase.DAL.csproj" />
-    <ProjectReference Include="..\PcPartsDatbase.Models\PcPartsDatbase.Models.csproj" />
+    <ProjectReference Include="..\PcPartsDatbase.Models\PcPartsDatabase.Models.csproj" />
   </ItemGroup>
 
 </Project>

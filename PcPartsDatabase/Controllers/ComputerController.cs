@@ -1,23 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using PcPartsDatabase.DAL;
+using PcPartsDatabase.BLL;
 using PcPartsDatbase.Models;
 
 namespace PcPartsDatabase.Controllers
 {
     public class ComputerController : Controller
     {
-        private readonly PcPartsDatabaseDbContext _context;
+        private readonly ComputerService _computerService;
 
-        public ComputerController(PcPartsDatabaseDbContext context)
+        public ComputerController(ComputerService computerService)
         {
-            _context = context;
+            _computerService = computerService;
         }
 
         [HttpGet]
         public IActionResult Index()
         {
-            List<Computer> computers = _context.Computers.Include(c => c.Processor).Include(c => c.GraphicsCard).Include(c => c.Storage).Include(c => c.OperatingSystems).ToList();
+            var computers = _computerService.GetAllComputers();
             return View(computers);
         }
 
@@ -32,24 +31,23 @@ namespace PcPartsDatabase.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View();
+                return View(computer);
             }
 
-            _context.Add(computer);
-            _context.SaveChanges();
+            _computerService.AddComputer(computer);
             return RedirectToAction("Index");
         }
 
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            if (id == null)
+            if (id == 0)
             {
                 return NotFound();
             }
 
-            Computer computer = _context.Computers.Find(id);
-            
+            var computer = _computerService.GetComputer(id);
+
             if (computer == null)
             {
                 return NotFound();
@@ -66,27 +64,28 @@ namespace PcPartsDatabase.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(computer);
-                    _context.SaveChanges();
-                }
-                catch (Exception ex)
-                {
-                    if (!_context.Computers.Any(e => e.SystemID == computer.SystemID))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-                }
-                return RedirectToAction("Index");
+                return View(computer);
             }
-            return View(computer);
+
+            try
+            {
+                _computerService.UpdateComputer(computer);
+            }
+            catch (Exception ex)
+            {
+                if (!_computerService.ComputerExists(computer.SystemID))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+
+            return RedirectToAction("Index");
         }
     }
 }

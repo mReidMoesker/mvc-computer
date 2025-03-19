@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\mitt (wtr)\\sd-advanced-database\\exercises\\PcPartsDatabase\\PcPartsDatbase.Models\\PcPartsDatbase.Models.csproj",
-      "projectName": "PcPartsDatbase.Models",
-      "projectPath": "C:\\mitt (wtr)\\sd-advanced-database\\exercises\\PcPartsDatabase\\PcPartsDatbase.Models\\PcPartsDatbase.Models.csproj",
+      "projectUniqueName": "C:\\mitt (wtr)\\sd-advanced-database\\exercises\\PcPartsDatabase\\PcPartsDatbase.Models\\PcPartsDatabase.Models.csproj",
+      "projectName": "PcPartsDatabase.Models",
+      "projectPath": "C:\\mitt (wtr)\\sd-advanced-database\\exercises\\PcPartsDatabase\\PcPartsDatbase.Models\\PcPartsDatabase.Models.csproj",
       "packagesPath": "C:\\Users\\hmoes\\.nuget\\packages\\",
       "outputPath": "C:\\mitt (wtr)\\sd-advanced-database\\exercises\\PcPartsDatabase\\PcPartsDatbase.Models\\obj\\",
       "projectStyle": "PackageReference",
